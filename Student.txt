@@ -1,1 +1,1 @@
-Rabin,2
+Rabin,95

@@ -9,7 +9,7 @@ class StudentRecordSystem:
                 file.write(f"{name},{marks}\n")
                 print(f"Student '{name}' added successfully!")
         except Exception as e:
-                print(f"❌ Error while adding student: {e}")
+                print(f"Error while adding student: {e}")
     # to view students in file
     def view_students(self):
          try:
@@ -18,10 +18,11 @@ class StudentRecordSystem:
                 if not data:
                     print("No data Found....")
                     return
-                print("\n📋 Student Records:")
+                print("\nStudent Records:")
                 for line in data:
                     name , marks = line.strip().split(",")
                     print(f"Name: {name}, Marks: {marks}")
+                    return
          except FileNotFoundError as e:
               print("File not found..")
 
@@ -32,12 +33,12 @@ class StudentRecordSystem:
                 found = False
                 for line in file:
                     student_name , mark = line.strip().split(",")
-                    if student_name.lower() == name.lower() :
-                        print(f"🔍 Found → {student_name}, Marks: {marks}")
+                    if student_name.lower() ==  str(name).lower():
+                        print(f"Found ={student_name}, Marks: {mark}")
                         found=True
                         return
-                    if not found:
-                        print(f"❌ Student '{name}' not found.")
+                if not found:
+                    print(f"Student '{name}' not found.")
 
         except FileNotFoundError as e:
             print('File not found...')
@@ -58,11 +59,24 @@ class StudentRecordSystem:
                         deleted = True
 
             if deleted:
-                print(f"🗑 Student '{name}' deleted successfully.")
+                print(f"Student '{name}' deleted successfully.")
             else:
-                print(f"❌ Student '{name}' not found.")
+                print(f" Student '{name}' not found.")
         except FileNotFoundError:
-            print("⚠ No records yet. Add a student first.")
+            print("No records yet. Add a student first.")
 
-handeler = StudentRecordSystem()
-handeler.add_student("Rabin" , 2)
+# -------------------------------
+#  Testing the System
+# -------------------------------
+system = StudentRecordSystem()
+
+system.add_student("Rabin", 95)
+system.add_student("Sita", 88)
+
+system.view_students()
+
+system.search_student("Rabin")
+system.search_student("Hari")
+
+system.delete_student("Sita")
+system.view_students()
