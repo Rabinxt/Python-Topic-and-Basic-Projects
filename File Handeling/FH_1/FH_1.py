@@ -1,3 +1,4 @@
+
 class StudentRecordSystem:
     def __init__(self , filename ="Student.txt"):
         self.filename = filename
@@ -40,3 +41,28 @@ class StudentRecordSystem:
 
         except FileNotFoundError as e:
             print('File not found...')
+    
+    # Delete Student by Name
+    def delete_student(self, name):
+        try:
+            with open(self.filename, "r") as file:
+                lines = file.readlines()
+
+            with open(self.filename, "w") as file:
+                deleted = False
+                for line in lines:
+                    student_name, marks = line.strip().split(",")
+                    if student_name.lower() != name.lower():
+                        file.write(line)
+                    else:
+                        deleted = True
+
+            if deleted:
+                print(f"🗑 Student '{name}' deleted successfully.")
+            else:
+                print(f"❌ Student '{name}' not found.")
+        except FileNotFoundError:
+            print("⚠ No records yet. Add a student first.")
+
+handeler = StudentRecordSystem()
+handeler.add_student("Rabin" , 2)
