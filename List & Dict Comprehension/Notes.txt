@@ -1,0 +1,71 @@
+
+Python List & Dictionary Comprehension - Short Notes
+====================================================
+
+🧠 List Comprehension
+----------------------
+✅ Basic Syntax:
+    [expression for item in iterable if condition]
+
+🔹 Without Condition:
+    squares = [x*x for x in range(5)]   # → [0, 1, 4, 9, 16]
+
+🔹 With Condition:
+    even_squares = [x*x for x in range(10) if x % 2 == 0]   # → [0, 4, 16, 36, 64]
+
+🔹 Nested List Comprehension:
+    matrix = [[i*j for j in range(3)] for i in range(3)]
+    # → [[0, 0, 0], [0, 1, 2], [0, 2, 4]]
+
+
+🧠 Dictionary Comprehension
+----------------------------
+✅ Basic Syntax:
+    {key_expr: value_expr for item in iterable if condition}
+
+🔹 Example 1: Squares
+    squares = {x: x*x for x in range(5)}   # → {0: 0, 1: 1, 2: 4, 3: 9, 4: 16}
+
+🔹 Example 2: Filter only even keys
+    even_squares = {x: x*x for x in range(10) if x % 2 == 0}
+    # → {0: 0, 2: 4, 4: 16, 6: 36, 8: 64}
+
+
+💡 When to Use:
+---------------
+| Task                        | Use This             |
+|----------------------------|----------------------|
+| Create new list from existing | List Comprehension |
+| Create new dict from list     | Dict Comprehension |
+| Apply transformation/filter   | Both               |
+| Avoid long for loops          | Both               |
+
+
+🔥 Advanced Tips:
+-----------------
+1. Flatten a list of lists:
+    flat = [num for row in matrix for num in row]
+
+2. Swap keys and values in a dict:
+    original = {'a': 1, 'b': 2}
+    swapped = {v: k for k, v in original.items()}  # → {1: 'a', 2: 'b'}
+
+3. Conditional expressions (ternary) inside:
+    labels = ["even" if x % 2 == 0 else "odd" for x in range(5)]
+    # → ['even', 'odd', 'even', 'odd', 'even']
+
+
+🚫 When Not to Use:
+--------------------
+- When logic is too complex (avoid making one-liners hard to read).
+- Avoid nesting too deeply – readability matters.
+
+
+✅ Practice Checklist:
+----------------------
+[ ] Basic list transformation  
+[ ] Add if condition  
+[ ] Nested loop in comprehension  
+[ ] Build dict from list  
+[ ] Filter data using dict/list comprehension  
+[ ] Use ternary (if-else) inside comprehension  
