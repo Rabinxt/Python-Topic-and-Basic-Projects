@@ -1,0 +1,85 @@
+📘 PYTHON MODULES AND PACKAGES
+
+============================
+🔹 1. What is a Module?
+============================
+- A module is a Python file (.py) containing functions, classes, or variables.
+- It allows you to organize and reuse code.
+
+✅ Example:
+# mymodule.py
+def greet(name):
+    return f"Hello, {name}!"
+
+# main.py
+import mymodule
+print(mymodule.greet("Rabin"))  # Output: Hello, Rabin!
+
+============================
+🔹 2. Ways to Import Modules
+============================
+1. import module
+   import math
+   print(math.sqrt(9))
+
+2. from module import function
+   from math import sqrt
+   print(sqrt(9))
+
+3. from module import *
+   from math import *
+   print(sqrt(9))  # Not recommended in large projects
+
+4. import module as alias
+   import math as m
+   print(m.sqrt(25))
+
+============================
+🔹 3. What is a Package?
+============================
+- A package is a folder that contains multiple Python files (modules).
+- It must contain an __init__.py file (can be empty).
+
+📂 Example Folder Structure:
+myapp/
+│
+├── mypackage/
+│   ├── __init__.py
+│   ├── module1.py
+│   └── module2.py
+│
+└── main.py
+
+# module1.py
+def hello():
+    print("Hello from module1")
+
+# main.py
+from mypackage import module1
+module1.hello()
+
+============================
+🔹 4. Useful Built-in Modules
+============================
+| Module     | Purpose                          |
+|------------|----------------------------------|
+| math       | Mathematical operations          |
+| random     | Random numbers and choices       |
+| datetime   | Date and time handling           |
+| os         | File and directory operations    |
+| sys        | System-specific parameters       |
+
+============================
+🔹 5. Benefits of Using Modules & Packages
+============================
+- Makes code reusable
+- Keeps code organized
+- Avoids duplication
+- Easy to manage in large projects
+
+============================
+✅ Summary
+============================
+- A module = a single Python file.
+- A package = a folder containing modules and __init__.py.
+- You can import entire modules or specific parts of them.
