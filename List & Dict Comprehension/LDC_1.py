@@ -17,5 +17,7 @@ class Word:
         return longWord,lenOfWord
 
 handler = Word(["machine", "ai", "data", "analytics", "python", "ml", "learning"])
-handler.filterlen()
+words , length = handler.filterlen()
+print(f"Words is: {words}")
+print(f"Length is: {length}")
 
