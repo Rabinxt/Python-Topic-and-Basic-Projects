@@ -18,4 +18,12 @@ def median(data):
         return sorted_data[mid]
     else:
         return (sorted_data[mid - 1] + sorted_data[mid]) / 2
+    
+def mode(data):
+    from collections import Counter
+    freq = Counter(data)
+    max_count = max(freq.values())
+    modes = [k for k, v in freq.items() if v == max_count]
+    return modes if len(modes) > 1 else modes[0]
+
 # ALSO NEEDED TO ADD PROBABLITY PACKAGE LIKE COMBINATIONS , PERMUTATIONS ETC.......
