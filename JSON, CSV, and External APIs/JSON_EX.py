@@ -8,7 +8,7 @@ json_data = {
     "skills": ["Python", "Machine Learning", "Data Analysis"],
     "is_student": True
 }
-python_obj = {"city": "Kathmandu", "country": "Nepal"}
+python_obj = {"city": "Kathmandu", "country": "Nepal"} 
 
 # Convert JSON → Python
 # 1. Why convert JSON → Python?
