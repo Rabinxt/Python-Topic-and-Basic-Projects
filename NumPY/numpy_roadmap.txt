@@ -1,0 +1,46 @@
+NumPy Roadmap (Step by Step)
+
+1.  Basics of NumPy
+    -   What is NumPy and why use it?
+    -   Installing NumPy
+    -   Importing NumPy (import numpy as np)
+2.  NumPy Arrays
+    -   Creating arrays (list to array, np.array())
+    -   Difference between Python lists and NumPy arrays
+    -   Array attributes (shape, size, dtype, ndim)
+3.  Array Creation Functions
+    -   np.zeros(), np.ones(), np.full()
+    -   np.arange(), np.linspace()
+    -   np.eye() (identity matrix)
+    -   Random arrays: np.random.rand(), np.random.randint()
+4.  Array Operations
+    -   Indexing and slicing
+    -   Reshaping arrays
+    -   Flatten vs ravel
+    -   Joining and splitting arrays
+5.  Mathematical Operations
+    -   Element-wise operations (+, -, *, /, **)
+    -   Aggregate functions (sum, mean, max, min, std)
+    -   Broadcasting rules
+6.  Advanced Indexing
+    -   Boolean indexing
+    -   Fancy indexing (using arrays of indices)
+7.  Linear Algebra with NumPy
+    -   Dot product
+    -   Matrix multiplication (np.dot, @)
+    -   Transpose
+    -   Determinant and inverse (np.linalg)
+8.  Random Module in NumPy
+    -   Random numbers
+    -   Shuffling arrays
+    -   Setting random seed
+9.  Practical Applications
+    -   Handling datasets with NumPy
+    -   Using NumPy in Machine Learning / Data Science
+    -   Integration with Pandas, Matplotlib, Scikit-learn
+10. Projects & Practice
+
+-   Small numerical simulations
+-   Basic data analysis using NumPy arrays
+-   Implement simple algorithms (mean, variance, linear regression)
+    manually using NumPy
