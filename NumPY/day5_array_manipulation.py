@@ -25,3 +25,9 @@ print(odd_numbers)
 #Filtering with mask
 mask = numbers > 5
 print(numbers[mask])
+
+#Fancy Indexing
+indices = [1, 4 ,5]
+print(numbers[indices])
+where = np.where(numbers % 2 == 0)
+print(numbers[where])
