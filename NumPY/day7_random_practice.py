@@ -8,6 +8,7 @@ print(np.random.rand(), "\n")
 print("Random array (3x2):")
 print(np.random.rand(3, 2), "\n")
 
+
 # 3. Random integers
 print("Random integer (1-9):")
 print(np.random.randint(1, 10), "\n")
