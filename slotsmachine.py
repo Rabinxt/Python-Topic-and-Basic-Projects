@@ -27,7 +27,12 @@ def main():
         if bet > balance:
             print("Insufficient Funds")
             continue
+        if bet <= 0 :
+            print("Bet must be greater than 0")
+            continue
+        balance -= bet
         
+        spin = spin_row()
     
 
 if __name__ == '__main__':
