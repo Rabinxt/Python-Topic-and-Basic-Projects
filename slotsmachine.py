@@ -6,10 +6,23 @@ def spin_row():
     
     
 def print_row(row):
-    print(" ".join(row))
+    print("***************")
+    print(" | ".join(row))
+    print("***************")
 
-def get_payout():
-    pass
+def get_payout(row , bet):
+    if row[0] == row[1] == row[2]:
+        if row[0] == "🍒":
+            return bet * 3
+        elif row[0] == "🍋":
+            return bet * 4
+        elif row[0] == "🍉":
+            return bet * 5
+        elif row[0] == "🔔":
+            return bet * 10
+        elif row[0] == "⭐":
+            return bet * 20
+    return 0 
 
 def main():
     balance = 100
@@ -37,7 +50,18 @@ def main():
         row = spin_row()
         print("Spinning.....\n")
         print_row(row)
-    
+        payout = get_payout(row , bet)
+        
+        if payout > 0 :
+            print(f"You have won {payout}")
+        else:
+            print("You have lost this round.")
+        balance += payout
+        
+        play_again = input("Do you want to play again? (Y/N) :").upper()
+        if play_again != 'Y':
+            break
+
 
 if __name__ == '__main__':
     main()
