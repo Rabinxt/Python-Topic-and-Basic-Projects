@@ -11,13 +11,24 @@ def get_payout():
 
 def main():
     balance = 100
-    print("*******************************************************")
+    print("*****************************")
     print(" Welcome! to python Slots")
-    print(" Symbols : Cherry | Lemon | Watermelon | Bell | Star")
-    print("*******************************************************")
+    print(" Symbols : 🍒 🍋 🍉 🔔 ⭐ ")
+    print("*****************************")
     while balance > 0 :
         print(f"Current Balance : ${balance}")
-        bet = input("Enter Bet amount " )
+        bet = input("Enter Bet amount: ")
+        
+        if not bet.isdigit():
+            print("Please enter a valid number!!!")
+            continue
+        bet = int(bet)
+        
+        if bet > balance:
+            print("Insufficient Funds")
+            continue
+        
+    
 
 if __name__ == '__main__':
     main()
