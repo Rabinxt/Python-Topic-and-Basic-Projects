@@ -15,3 +15,14 @@ for letter in plain_text:
     index = chars.index(letter)
     cipher_text += key[index]
 print(f"Cipher Text : {cipher_text}")
+#DECRYPT
+
+cipher_text = input("Enter the encrypted message : ")
+plain_text = ''
+
+for letter in cipher_text:
+    index = key.index(letter)
+    plain_text += chars[index]
+print(f"Encrypt Message : {cipher_text}")
+print(f"Your Message Text : {plain_text}")
+
