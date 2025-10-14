@@ -1,0 +1,1 @@
+email = input("Please input Email to Check: ")
