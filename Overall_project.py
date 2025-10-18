@@ -6,6 +6,3 @@
 # Has multiple modules
 # # Uses file handling for reports
 
-
-class StudentRecord:
-    
