@@ -7,8 +7,11 @@ if len(email)>6:
                 for i in email:
                     if i == ' ':
                         print("Cant hold whitespace character")
+                        break
                     elif i == i.isupper:
                         print("Wrong format")
+                    else:
+                        
             else:
                 print("Wrong Format")
         else:
