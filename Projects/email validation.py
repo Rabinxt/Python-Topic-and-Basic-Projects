@@ -4,7 +4,11 @@ if len(email)>6:
     if email[0].isalpha :
         if ("@" in email) and (email.count("@") == 1):
             if (email[-3] == '.') ^ (email[-4] == '.'):
-                pass
+                for i in email:
+                    if i == ' ':
+                        print("Cant hold whitespace character")
+                    elif i == i.isupper:
+                        print("Wrong format")
             else:
                 print("Wrong Format")
         else:
