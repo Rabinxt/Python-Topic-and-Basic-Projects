@@ -3,7 +3,10 @@ email = input("Please input Email to Check: ")
 if len(email)>6:
     if email[0].isalpha :
         if ("@" in email) and (email.count("@") == 1):
-            pass
+            if (email[-3] == '.') ^ (email[-4] == '.'):
+                pass
+            else:
+                print("Wrong Format")
         else:
             print("Wrong Format")
     else:
