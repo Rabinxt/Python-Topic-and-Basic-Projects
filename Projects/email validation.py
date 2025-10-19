@@ -8,9 +8,12 @@ if len(email)>6:
                     if i == ' ':
                         print("Cant hold whitespace character")
                         break
-                    elif i == i.isupper:
+                    elif i.isupper():
                         print("Wrong format")
+                        break
                     else:
+                        print("Email is Valid")
+                        break
                         
             else:
                 print("Wrong Format")
